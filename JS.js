@@ -144,7 +144,7 @@ class Bubble{
                 this.x- this.radius, this.y - (this.radius*1.55), this.spriteWidth/4, this.spriteHeight/4);
         }else{
             this.slowX++;
-            this.slowy++;
+            this.slowY++;
             if (this.frameX != 4 && this.frameY != 2){
                 if(this.frameX != 4){
                     if(this.slowX % 10 == 0){this.frameX++;}
