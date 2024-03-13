@@ -126,6 +126,8 @@ class Bubble{
         this.spriteWidth = 393.75;
         this.frameX = 0;
         this.frameY = 0;
+        this.slowX = 0;
+        this.slowY = 0;
         this.counted = false;
         this.sound = Math.random() <= 0.5 ? 'sound1' : 'sound2';
     }
@@ -141,11 +143,13 @@ class Bubble{
                 this.frameY * this.spriteHeight,this.spriteWidth,this.spriteHeight,
                 this.x- this.radius, this.y - (this.radius*1.55), this.spriteWidth/4, this.spriteHeight/4);
         }else{
+            this.slowX++;
+            this.slowy++;
             if (this.frameX != 4 && this.frameY != 2){
                 if(this.frameX != 4){
-                    this.frameX++;
+                    if(this.slowX % 10 == 0){this.frameX++;}
                 }else{
-                    this.frameY++;
+                    if(this.slowY % 10 == 0){this.frameY++;}
                 }
             }
             ctx.drawImage(bubbleImage, this.frameX * this.spriteWidth,
