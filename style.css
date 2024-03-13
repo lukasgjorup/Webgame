@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*border-box means that padding and border is also within the objects hight and witdh*/
+    box-sizing: border-box;
+    background-color: grey;
+
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /*centers it horizontaly*/
+    justify-content: center;
+    /*center it vertacally*/
+    align-items: center;
+}
+#canvas{
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    background: linear-gradient(to bottom, lightblue,darkblue,black);
+}
